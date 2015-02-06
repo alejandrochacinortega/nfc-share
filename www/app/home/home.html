@@ -18,12 +18,15 @@
             </div>
 
 
-            <div class="item item-body" ng-repeat="data in vm.single">
-                <h2>{{data.store}}</h2>
-                <h2>{{data.amount}}</h2>
-                <p>{{data.tlf}}</p>
-                <p>{{data.location}}</p>
-            </div>
+            <div class="item item-body text-center">
+                <h2>{{vm.single.store}}</h2>
+                <h2>Items</h2>
+                <div ng-repeat="items in vm.single.items">
+                    <h4>{{items.name}} - {{items.price}}</h4>
+                </div>
+                <h2>Total: {{vm.single.amount}}</h2>
+                <p> Telephone: {{vm.single.tlf}}</p>
+                <p>{{vm.single.location}}</p>
 
             <button class="item tabs button button-balanced" ng-click="vm.listAccess()">
                 <i class="ion-checkmark-round"></i>  Save

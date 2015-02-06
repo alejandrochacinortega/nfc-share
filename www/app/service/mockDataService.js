@@ -212,14 +212,25 @@ function MockDataService($rootScope, $ionicPlatform, $cordovaNfc, $cordovaNfcUti
     }
 
     function getSingleData() {
-        var d = [
+        var d =
             {
+                receiptId: "1",
                 store: 'ICA',
-                amount: '20NOK',
+                amount: '80NOK',
+                "items": [
+                    {
+                        "name": "Milk",
+                        "price": "20 NOK"
+                    },
+
+                    {
+                        "name": "Pizza",
+                        "price": "60 NOK"
+                    }],
                 location: 'Oslo',
-                tlf: '24 11 61 70'
-            }
-        ];
+                tlf: '24 11 61 70' }
+
+        ;
         return d;
     }
 

@@ -8,7 +8,7 @@ function HomeController($scope, $ionicPlatform, $rootScope, MockDataService, $st
 
     vm.activate = activate;
     vm.title = 'HomeController';
-    vm.info = false;
+    vm.info = true;
     vm.listAccess = listAccess;
     activate();
     vm.array = '';
